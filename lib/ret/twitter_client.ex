@@ -153,7 +153,7 @@ defmodule Ret.TwitterClient do
 
     case result do
       :error ->
-        {:error, :twitter_probably_misconfigured}
+        {:error, :twitter_api_error}
 
       resp ->
         body = resp |> Map.get(:body) |> to_string
